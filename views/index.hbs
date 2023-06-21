@@ -1,2 +1,70 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Person Details</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #343a40;
+    }
+
+    .container {
+      margin-top: 50px;
+    }
+
+    .card {
+      background-color: #212529;
+      color: #fff;
+    }
+
+    .card-title {
+      color: #17a2b8;
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+
+    .btn-primary:hover {
+      background-color: #0069d9;
+      border-color: #0062cc;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">First Name</h5>
+      <p class="card-text">{{name}}</p>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Last Name</h5>
+      <p class="card-text">{{lname}}</p>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Email</h5>
+      <p class="card-text">{{email}}</p>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Username</h5>
+      <p class="card-text">{{username}}</p>
+    </div>
+    <form action="/logout?_method=DELETE" method="POST">
+    <div class="card-body">
+      <button type="submit" class="btn btn-primary">Logout</button>
+    </div>
+    </form>
+  </div>
+</div>
+
+<script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    
+</body>
+</html>
